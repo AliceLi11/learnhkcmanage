@@ -1,7 +1,7 @@
 <template>
     <div class="login-container">
         <!-- autocomplete为是否输入框下面显示以前的输入信息 -->
-        <el-form ref="form" :model="loginForm" :rules="loginRules" class="login-form" autocomplete="off" label-position="left">
+        <el-form ref="loginForm" :model="loginForm" :rules="loginRules" class="login-form" autocomplete="off" label-position="left">
 
             <div class="title-container">
                 <h3 class="title">Login Form</h3>
@@ -36,7 +36,7 @@
                 </el-input>
             </el-form-item>
 
-            <el-button type="primary" style="width:100%; margin-bottom:30px;" @click.prevent="handleLogin" :loading="loading">Login</el-button>
+            <el-button type="primary" style="width:100%; margin-bottom:30px;" @click.native.prevent="handleLogin" :loading="loading">Login</el-button>
 
             <div style="position:relative">
                 <div class="tips">
